@@ -29,6 +29,10 @@ jobs:
       - name: Generate coverage report
         continue-on-error: true
         run: mvn clean install jacoco:report -Dmaven.test.failure.ignore=true
+      - uses: actions/upload-artifact@v3
+        with:
+          name: coverage-results
+          path: target/site/jacoco
       - uses: docker/login-action@v2
         with:
           registry: registry.jetbrains.team
@@ -38,3 +42,4 @@ jobs:
         uses: JetBrains/qodana-action@main
         with:
           upload-result: true
+    
