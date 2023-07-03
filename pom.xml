@@ -96,8 +96,8 @@
                 <version>3.8.0</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
-                    <source>${jdk.version}</source>
-                    <target>${jdk.version}</target>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -580,7 +580,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.4</version>
+            <version>1.18.20</version>
             <scope>test</scope>
         </dependency>
 
@@ -659,6 +659,12 @@
                         <groupId>org.jacoco</groupId>
                         <artifactId>jacoco-maven-plugin</artifactId>
                         <version>0.8.7</version>
+                        <configuration>
+                            <formats>XML</formats>
+                            <includes>
+                                <include>com/**</include>
+                            </includes>
+                        </configuration>
                         <executions>
                             <execution>
                                 <goals>
@@ -680,4 +686,3 @@
 
     </profiles>
 </project>
-

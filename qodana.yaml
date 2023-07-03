@@ -1,0 +1,6 @@
+version: 1.0
+linter: registry.jetbrains.team/p/sa/containers/qodana-jvm:2023.3-nightly
+bootstrap: |
+  mkdir -p /data/coverage
+  mv target/jacoco/jacoco.xml /data/coverage
+  rm -rf .qodana
