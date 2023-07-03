@@ -1,5 +1,5 @@
 version: 1.0
-linter: registry.jetbrains.team/p/sa/containers/qodana-jvm:2023.2-nightly
+linter: registry.jetbrains.team/p/sa/containers/qodana-jvm:233.834.851
 bootstrap: |
   mkdir -p /data/coverage
   mv target/site/jacoco/jacoco.xml /data/coverage
