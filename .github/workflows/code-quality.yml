@@ -28,7 +28,7 @@ jobs:
             ${{ runner.os }}
       - name: Generate coverage report
         continue-on-error: true
-        run: mvn test ; mvn jacoco:report
+        run: mvn clean install jacoco:report -Dmaven.test.failure.ignore=true
       - uses: docker/login-action@v2
         with:
           registry: registry.jetbrains.team
